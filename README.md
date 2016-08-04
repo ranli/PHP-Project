@@ -1,5 +1,25 @@
 This project is based on the ThinkPHP FramWork.
 
+Application/Admin  is the Back-end
+
+Application/Home  is the Front-end
+
+Html include all the html files used
+
+Layer ui is used, files in  js/dialog, and I rewrite the document for concience, in js/dialog.js
+
+kindeditor is used  js/kindeditor
+
+uploadify plug-in used.
+
+
+
+
+
+
+
+
+Below is the Introduction of ThinkPHP
 
 ﻿## 简介
 

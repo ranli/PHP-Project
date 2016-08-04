@@ -1,0 +1,764 @@
+[ 2016-08-04T10:18:28+08:00 ] 127.0.0.1 /index.php?m=admin&c=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000074s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002202s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.016130s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.016320s ]
+NOTIC: [8] Undefined variable: module G:\php\htdocs\project\ThinkPHP\Common\functions.php 第 990 行.
+NOTIC: [8] Undefined variable: var G:\php\htdocs\project\ThinkPHP\Common\functions.php 第 990 行.
+NOTIC: [2] array_reverse() expects parameter 1 to be array, null given G:\php\htdocs\project\ThinkPHP\Common\functions.php 第 990 行.
+NOTIC: [2] http_build_query(): Parameter 1 expected to be Array or Object.  Incorrect value given G:\php\htdocs\project\ThinkPHP\Common\functions.php 第 990 行.
+
+[ 2016-08-04T10:19:22+08:00 ] 127.0.0.1 /admin.php?c=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000335s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000390s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000436s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.031901s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.032090s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.073462s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.073607s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000795s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000939s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001536s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001689s ]
+
+[ 2016-08-04T10:19:22+08:00 ] 127.0.0.1 /admin.php?c=login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000028s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001290s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000522s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000601s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000044s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000094s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005189s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005259s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000222s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000263s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000430s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000473s ]
+
+[ 2016-08-04T10:19:27+08:00 ] 127.0.0.1 /index.php?m=admin&c=login&a=check
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000512s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000640s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000720s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0326s ]
+SQL: SELECT * FROM `cms_admin` WHERE ( username="admin" ) LIMIT 1   [ RunTime:0.0004s ]
+NOTIC: [8] Use of undefined constant MD5_PRE - assumed 'MD5_PRE' G:\php\htdocs\project\Application\Common\Common\function.php 第 11 行.
+SQL: UPDATE `cms_admin` SET `lastlogintime`='1470277167' WHERE ( admin_id=1 ) [ RunTime:0.0006s ]
+
+[ 2016-08-04T10:19:28+08:00 ] 127.0.0.1 /index.php?m=admin&c=index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000338s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000703s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000790s ]
+NOTIC: [2048] Declaration of Common\Model\NewsModel::find() should be compatible with Think\Model::find($options = Array) G:\php\htdocs\project\Application\Common\Model\NewsModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `cms_news` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `cms_news` WHERE `status` = 1 ORDER BY count desc LIMIT 1   [ RunTime:0.0013s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_news` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `cms_position` [ RunTime:0.0276s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_position` WHERE `status` = 1 LIMIT 1   [ RunTime:0.0196s ]
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0026s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_admin` WHERE `status` = 1 AND `lastlogintime` > 1470240000 LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] Illegal string offset 'tp_count' G:\php\htdocs\project\Application\Common\Model\AdminModel.class.php 第 68 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000121s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) G:\php\htdocs\project\Application\Common\Model\MenuModel.class.php 第 89 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0042s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc, menu_id desc  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049688s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049751s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000313s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000356s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000764s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000850s ]
+
+[ 2016-08-04T10:19:35+08:00 ] 127.0.0.1 /admin.php?c=admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000382s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000486s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000542s ]
+NOTIC: [2048] Declaration of Admin\Controller\AdminController::setStatus() should be compatible with Admin\Controller\CommonController::setStatus($data, $models) G:\php\htdocs\project\Application\Admin\Controller\AdminController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `cms_admin` WHERE `status` <> -1  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000068s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000128s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) G:\php\htdocs\project\Application\Common\Model\MenuModel.class.php 第 89 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc, menu_id desc  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.031627s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031681s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000560s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000608s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000800s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000877s ]
+
+[ 2016-08-04T10:19:39+08:00 ] 127.0.0.1 /admin.php?c=admin&a=setStatus
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000336s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000771s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000864s ]
+NOTIC: [2048] Declaration of Admin\Controller\AdminController::setStatus() should be compatible with Admin\Controller\CommonController::setStatus($data, $models) G:\php\htdocs\project\Application\Admin\Controller\AdminController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0027s ]
+SQL: UPDATE `cms_admin` SET `status`='0' WHERE ( admin_id=5 ) [ RunTime:0.0003s ]
+
+[ 2016-08-04T10:19:40+08:00 ] 127.0.0.1 /admin.php?c=admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000405s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000489s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000546s ]
+NOTIC: [2048] Declaration of Admin\Controller\AdminController::setStatus() should be compatible with Admin\Controller\CommonController::setStatus($data, $models) G:\php\htdocs\project\Application\Admin\Controller\AdminController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `cms_admin` WHERE `status` <> -1  [ RunTime:0.0005s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000103s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) G:\php\htdocs\project\Application\Common\Model\MenuModel.class.php 第 89 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc, menu_id desc  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.015247s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015296s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000512s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000551s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000734s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000802s ]
+
+[ 2016-08-04T10:20:28+08:00 ] 127.0.0.1 /admin.php?c=admin&a=setStatus
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000328s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000410s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000455s ]
+NOTIC: [2048] Declaration of Admin\Controller\AdminController::setStatus() should be compatible with Admin\Controller\CommonController::setStatus($data, $models) G:\php\htdocs\project\Application\Admin\Controller\AdminController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0027s ]
+SQL: UPDATE `cms_admin` SET `status`='1' WHERE ( admin_id=5 ) [ RunTime:0.0003s ]
+
+[ 2016-08-04T10:20:29+08:00 ] 127.0.0.1 /admin.php?c=admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000411s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000417s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000466s ]
+NOTIC: [2048] Declaration of Admin\Controller\AdminController::setStatus() should be compatible with Admin\Controller\CommonController::setStatus($data, $models) G:\php\htdocs\project\Application\Admin\Controller\AdminController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `cms_admin` WHERE `status` <> -1  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000116s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) G:\php\htdocs\project\Application\Common\Model\MenuModel.class.php 第 89 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc, menu_id desc  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014211s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014256s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000562s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000601s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000748s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000817s ]
+
+[ 2016-08-04T10:20:32+08:00 ] 127.0.0.1 /admin.php?c=admin&a=setStatus
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000437s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000586s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000640s ]
+NOTIC: [2048] Declaration of Admin\Controller\AdminController::setStatus() should be compatible with Admin\Controller\CommonController::setStatus($data, $models) G:\php\htdocs\project\Application\Admin\Controller\AdminController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0030s ]
+SQL: UPDATE `cms_admin` SET `status`='-1' WHERE ( admin_id=5 ) [ RunTime:0.0003s ]
+
+[ 2016-08-04T10:20:33+08:00 ] 127.0.0.1 /admin.php?c=admin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000386s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000485s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000542s ]
+NOTIC: [2048] Declaration of Admin\Controller\AdminController::setStatus() should be compatible with Admin\Controller\CommonController::setStatus($data, $models) G:\php\htdocs\project\Application\Admin\Controller\AdminController.class.php 第 9 行.
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0260s ]
+SQL: SELECT * FROM `cms_admin` WHERE `status` <> -1  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000132s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) G:\php\htdocs\project\Application\Common\Model\MenuModel.class.php 第 89 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc, menu_id desc  [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016595s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016668s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001184s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001248s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000817s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000894s ]
+
+[ 2016-08-04T10:23:30+08:00 ] 127.0.0.1 /admin.php?c=menu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000458s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000643s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000700s ]
+NOTIC: [2048] Declaration of Admin\Controller\MenuController::setStatus() should be compatible with Admin\Controller\CommonController::setStatus($data, $models) G:\php\htdocs\project\Application\Admin\Controller\MenuController.class.php 第 7 行.
+NOTIC: [8] Undefined index: p G:\php\htdocs\project\Application\Admin\Controller\MenuController.class.php 第 19 行.
+NOTIC: [8] Undefined index: pageSize G:\php\htdocs\project\Application\Admin\Controller\MenuController.class.php 第 20 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) G:\php\htdocs\project\Application\Common\Model\MenuModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 ORDER BY listorder desc, menu_id desc LIMIT 0,3   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_menu` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000076s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000142s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc, menu_id desc  [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.036889s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.036948s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000592s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000639s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000886s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000959s ]
+
+[ 2016-08-04T10:23:33+08:00 ] 127.0.0.1 /admin.php?m=Admin&c=Menu&a=index&p=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000385s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000536s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000602s ]
+NOTIC: [2048] Declaration of Admin\Controller\MenuController::setStatus() should be compatible with Admin\Controller\CommonController::setStatus($data, $models) G:\php\htdocs\project\Application\Admin\Controller\MenuController.class.php 第 7 行.
+NOTIC: [8] Undefined index: pageSize G:\php\htdocs\project\Application\Admin\Controller\MenuController.class.php 第 20 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) G:\php\htdocs\project\Application\Common\Model\MenuModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0043s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 ORDER BY listorder desc, menu_id desc LIMIT 3,3   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_menu` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000112s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc, menu_id desc  [ RunTime:0.0009s ]
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011421s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011468s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000538s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000577s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000697s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000756s ]
+
+[ 2016-08-04T10:23:38+08:00 ] 127.0.0.1 /admin.php?c=menu&a=setStatus
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000380s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000492s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000554s ]
+NOTIC: [2048] Declaration of Admin\Controller\MenuController::setStatus() should be compatible with Admin\Controller\CommonController::setStatus($data, $models) G:\php\htdocs\project\Application\Admin\Controller\MenuController.class.php 第 7 行.
+SQL: SHOW COLUMNS FROM `cms_admin` [ RunTime:0.0028s ]
+SQL: UPDATE `cms_admin` SET `status`='-1' WHERE ( admin_id=9 ) [ RunTime:0.0003s ]
+
+[ 2016-08-04T10:23:50+08:00 ] 127.0.0.1 /admin.php?m=Admin&c=Menu&a=index&p=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000029s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000999s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000706s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000798s ]
+NOTIC: [2048] Declaration of Admin\Controller\MenuController::setStatus() should be compatible with Admin\Controller\CommonController::setStatus($data, $models) G:\php\htdocs\project\Application\Admin\Controller\MenuController.class.php 第 7 行.
+NOTIC: [8] Undefined index: pageSize G:\php\htdocs\project\Application\Admin\Controller\MenuController.class.php 第 20 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) G:\php\htdocs\project\Application\Common\Model\MenuModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 ORDER BY listorder desc, menu_id desc LIMIT 3,3   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_menu` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000137s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc, menu_id desc  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011799s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011849s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000512s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000562s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001301s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001471s ]
+
+[ 2016-08-04T10:23:56+08:00 ] 127.0.0.1 /admin.php?m=Admin&c=Menu&a=index&p=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000473s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000651s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000714s ]
+NOTIC: [2048] Declaration of Admin\Controller\MenuController::setStatus() should be compatible with Admin\Controller\CommonController::setStatus($data, $models) G:\php\htdocs\project\Application\Admin\Controller\MenuController.class.php 第 7 行.
+NOTIC: [8] Undefined index: pageSize G:\php\htdocs\project\Application\Admin\Controller\MenuController.class.php 第 20 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) G:\php\htdocs\project\Application\Common\Model\MenuModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 ORDER BY listorder desc, menu_id desc LIMIT 6,3   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_menu` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000064s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000114s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc, menu_id desc  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011885s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011936s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000507s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000566s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001026s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001119s ]
+
+[ 2016-08-04T10:23:59+08:00 ] 127.0.0.1 /admin.php?m=Admin&c=Menu&a=index&p=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000534s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000480s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000538s ]
+NOTIC: [2048] Declaration of Admin\Controller\MenuController::setStatus() should be compatible with Admin\Controller\CommonController::setStatus($data, $models) G:\php\htdocs\project\Application\Admin\Controller\MenuController.class.php 第 7 行.
+NOTIC: [8] Undefined index: pageSize G:\php\htdocs\project\Application\Admin\Controller\MenuController.class.php 第 20 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) G:\php\htdocs\project\Application\Common\Model\MenuModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0048s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 ORDER BY listorder desc, menu_id desc LIMIT 3,3   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_menu` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000061s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000109s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc, menu_id desc  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010955s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010999s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000250s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000286s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000491s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000538s ]
+
+[ 2016-08-04T10:24:01+08:00 ] 127.0.0.1 /admin.php?m=Admin&c=Menu&a=index&p=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000389s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000481s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000538s ]
+NOTIC: [2048] Declaration of Admin\Controller\MenuController::setStatus() should be compatible with Admin\Controller\CommonController::setStatus($data, $models) G:\php\htdocs\project\Application\Admin\Controller\MenuController.class.php 第 7 行.
+NOTIC: [8] Undefined index: pageSize G:\php\htdocs\project\Application\Admin\Controller\MenuController.class.php 第 20 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) G:\php\htdocs\project\Application\Common\Model\MenuModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0033s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 ORDER BY listorder desc, menu_id desc LIMIT 0,3   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_menu` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000065s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000116s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc, menu_id desc  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010874s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010925s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000298s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000336s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000489s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000535s ]
+
+[ 2016-08-04T10:24:05+08:00 ] 127.0.0.1 /admin.php?m=Admin&c=Menu&a=index&p=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000604s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000692s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000790s ]
+NOTIC: [2048] Declaration of Admin\Controller\MenuController::setStatus() should be compatible with Admin\Controller\CommonController::setStatus($data, $models) G:\php\htdocs\project\Application\Admin\Controller\MenuController.class.php 第 7 行.
+NOTIC: [8] Undefined index: pageSize G:\php\htdocs\project\Application\Admin\Controller\MenuController.class.php 第 20 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) G:\php\htdocs\project\Application\Common\Model\MenuModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0038s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 ORDER BY listorder desc, menu_id desc LIMIT 3,3   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_menu` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000126s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc, menu_id desc  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011218s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011268s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000305s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000342s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000580s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000639s ]
+
+[ 2016-08-04T10:24:06+08:00 ] 127.0.0.1 /admin.php?m=Admin&c=Menu&a=index&p=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000379s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000484s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000539s ]
+NOTIC: [2048] Declaration of Admin\Controller\MenuController::setStatus() should be compatible with Admin\Controller\CommonController::setStatus($data, $models) G:\php\htdocs\project\Application\Admin\Controller\MenuController.class.php 第 7 行.
+NOTIC: [8] Undefined index: pageSize G:\php\htdocs\project\Application\Admin\Controller\MenuController.class.php 第 20 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) G:\php\htdocs\project\Application\Common\Model\MenuModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 ORDER BY listorder desc, menu_id desc LIMIT 6,3   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_menu` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000136s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc, menu_id desc  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012630s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012677s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000277s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000313s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000471s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000518s ]
+
+[ 2016-08-04T10:24:09+08:00 ] 127.0.0.1 /admin.php?c=menu&a=add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000450s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000421s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000471s ]
+NOTIC: [2048] Declaration of Admin\Controller\MenuController::setStatus() should be compatible with Admin\Controller\CommonController::setStatus($data, $models) G:\php\htdocs\project\Application\Admin\Controller\MenuController.class.php 第 7 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000057s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000108s ]
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) G:\php\htdocs\project\Application\Common\Model\MenuModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc, menu_id desc  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined variable: menus G:\php\htdocs\project\Application\Runtime\Cache\Admin\31553d7bb41170a30982ff9dddd5d67e.php 第 123 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044490s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044535s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000347s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000390s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001140s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001224s ]
+
+[ 2016-08-04T10:24:14+08:00 ] 127.0.0.1 /admin.php?c=menu&a=add
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000334s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000408s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000448s ]
+NOTIC: [2048] Declaration of Admin\Controller\MenuController::setStatus() should be compatible with Admin\Controller\CommonController::setStatus($data, $models) G:\php\htdocs\project\Application\Admin\Controller\MenuController.class.php 第 7 行.
+NOTIC: [8] Undefined index: menu_id G:\php\htdocs\project\Application\Admin\Controller\MenuController.class.php 第 46 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) G:\php\htdocs\project\Application\Common\Model\MenuModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0029s ]
+SQL: INSERT INTO `cms_menu` (`name`,`type`,`m`,`c`,`f`,`status`) VALUES ('asd','1','asd','asd','asd','1') [ RunTime:0.0005s ]
+
+[ 2016-08-04T10:24:15+08:00 ] 127.0.0.1 /admin.php?c=menu
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000339s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000392s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000453s ]
+NOTIC: [2048] Declaration of Admin\Controller\MenuController::setStatus() should be compatible with Admin\Controller\CommonController::setStatus($data, $models) G:\php\htdocs\project\Application\Admin\Controller\MenuController.class.php 第 7 行.
+NOTIC: [8] Undefined index: p G:\php\htdocs\project\Application\Admin\Controller\MenuController.class.php 第 19 行.
+NOTIC: [8] Undefined index: pageSize G:\php\htdocs\project\Application\Admin\Controller\MenuController.class.php 第 20 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) G:\php\htdocs\project\Application\Common\Model\MenuModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 ORDER BY listorder desc, menu_id desc LIMIT 0,3   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_menu` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000060s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000104s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc, menu_id desc  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011162s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011204s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000282s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000319s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000487s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000535s ]
+
+[ 2016-08-04T10:24:16+08:00 ] 127.0.0.1 /admin.php?m=Admin&c=Menu&a=index&p=2
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000346s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000430s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000486s ]
+NOTIC: [2048] Declaration of Admin\Controller\MenuController::setStatus() should be compatible with Admin\Controller\CommonController::setStatus($data, $models) G:\php\htdocs\project\Application\Admin\Controller\MenuController.class.php 第 7 行.
+NOTIC: [8] Undefined index: pageSize G:\php\htdocs\project\Application\Admin\Controller\MenuController.class.php 第 20 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) G:\php\htdocs\project\Application\Common\Model\MenuModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 ORDER BY listorder desc, menu_id desc LIMIT 3,3   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_menu` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000066s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000121s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc, menu_id desc  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012830s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012893s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000351s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000407s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000678s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000755s ]
+
+[ 2016-08-04T10:24:18+08:00 ] 127.0.0.1 /admin.php?m=Admin&c=Menu&a=index&p=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000382s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000620s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000690s ]
+NOTIC: [2048] Declaration of Admin\Controller\MenuController::setStatus() should be compatible with Admin\Controller\CommonController::setStatus($data, $models) G:\php\htdocs\project\Application\Admin\Controller\MenuController.class.php 第 7 行.
+NOTIC: [8] Undefined index: pageSize G:\php\htdocs\project\Application\Admin\Controller\MenuController.class.php 第 20 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) G:\php\htdocs\project\Application\Common\Model\MenuModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 ORDER BY listorder desc, menu_id desc LIMIT 6,3   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_menu` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000140s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc, menu_id desc  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012047s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012098s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000283s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000323s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000590s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000658s ]
+
+[ 2016-08-04T10:24:21+08:00 ] 127.0.0.1 /admin.php?c=menu&a=setStatus
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000381s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000487s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000541s ]
+NOTIC: [2048] Declaration of Admin\Controller\MenuController::setStatus() should be compatible with Admin\Controller\CommonController::setStatus($data, $models) G:\php\htdocs\project\Application\Admin\Controller\MenuController.class.php 第 7 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) G:\php\htdocs\project\Application\Common\Model\MenuModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0030s ]
+SQL: UPDATE `cms_menu` SET `status`='-1' WHERE ( menu_id=22 ) [ RunTime:0.0004s ]
+
+[ 2016-08-04T10:24:22+08:00 ] 127.0.0.1 /admin.php?m=Admin&c=Menu&a=index&p=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000393s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000482s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000542s ]
+NOTIC: [2048] Declaration of Admin\Controller\MenuController::setStatus() should be compatible with Admin\Controller\CommonController::setStatus($data, $models) G:\php\htdocs\project\Application\Admin\Controller\MenuController.class.php 第 7 行.
+NOTIC: [8] Undefined index: pageSize G:\php\htdocs\project\Application\Admin\Controller\MenuController.class.php 第 20 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) G:\php\htdocs\project\Application\Common\Model\MenuModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 ORDER BY listorder desc, menu_id desc LIMIT 6,3   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_menu` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000068s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000120s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc, menu_id desc  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011121s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011167s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000312s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000352s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000471s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000517s ]
+
+[ 2016-08-04T10:25:26+08:00 ] 127.0.0.1 /admin.php?m=Admin&c=Menu&a=index&p=3
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000479s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000618s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000694s ]
+NOTIC: [2048] Declaration of Admin\Controller\MenuController::setStatus() should be compatible with Admin\Controller\CommonController::setStatus($data, $models) G:\php\htdocs\project\Application\Admin\Controller\MenuController.class.php 第 7 行.
+NOTIC: [8] Undefined index: pageSize G:\php\htdocs\project\Application\Admin\Controller\MenuController.class.php 第 20 行.
+NOTIC: [2048] Declaration of Common\Model\MenuModel::find() should be compatible with Think\Model::find($options = Array) G:\php\htdocs\project\Application\Common\Model\MenuModel.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `cms_menu` [ RunTime:0.0242s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 ORDER BY listorder desc, menu_id desc LIMIT 6,3   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `cms_menu` WHERE `status` <> -1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000075s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000135s ]
+SQL: SELECT * FROM `cms_menu` WHERE `status` <> -1 AND `type` = 1 ORDER BY listorder desc, menu_id desc  [ RunTime:0.0006s ]
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+NOTIC: [8] Undefined index: a G:\php\htdocs\project\Application\Common\Common\function.php 第 31 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012471s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012523s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000329s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000375s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000590s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000658s ]
+

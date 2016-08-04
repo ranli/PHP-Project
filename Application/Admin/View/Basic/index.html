@@ -1,0 +1,79 @@
+<include file="Index/header" />
+<body>
+<div id="wrapper">
+
+  <include file="Index/nav"/>
+<div id="page-wrapper">
+
+	<div class="container-fluid">
+		<include file="Basic/button" />
+		<!-- Page Heading -->
+		<!-- /.row -->
+
+		<div class="row">
+			<div class="col-lg-6">
+
+				<form class="form-horizontal" id="singcms-form">
+					<div class="form-group">
+						<label for="inputname" class="col-sm-2 control-label">Website Title:</label>
+						<div class="col-sm-5">
+							<input type="text" name="title" value="{$vo.title}" class="form-control" id="inputname" placeholder="Website Title">
+						</div>
+					</div>
+
+					<div class="form-group">
+						<label for="inputPassword3" class="col-sm-2 control-label">Website Keywords:</label>
+						<div class="col-sm-5">
+							<input type="text" class="form-control" value="{$vo.keywords}" name="keywords" id="inputPassword3" placeholder="Website Keywords">
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputPassword3" class="col-sm-2 control-label">Website description:</label>
+						<div class="col-sm-5">
+							<textarea class="form-control" rows="3" name="description">{$vo.description}</textarea>
+						</div>
+					</div>
+					
+					<div class="form-group">
+						<label for="inputPassword3" class="col-sm-2 control-label">Backup database automatically?</label>
+						<div class="col-sm-5">
+							<input type="radio" name="dumpmysql" id="optionsRadiosInline1" value="1" <if condition="$vo.dumpmysql eq 1">checked</if>>Yes
+							<input type="radio" name="dumpmysql" id="optionsRadiosInline1" value="0" <if condition="$vo.dumpmysql eq 0">checked</if>>No
+						</div>
+					</div>
+					<div class="form-group">
+						<label for="inputPassword3" class="col-sm-2 control-label">Generate index cache automatically?</label>
+						<div class="col-sm-5">
+							<input type="radio" name="casheindex" id="optionsRadiosInline1" value="1" <if condition="$vo.casheindex eq 1">checked</if>>Yes
+							<input type="radio" name="casheindex" id="optionsRadiosInline1" value="0" <if condition="$vo.casheindex eq 0">checked</if>>No
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="col-sm-offset-2 col-sm-10">
+							<button type="button" class="btn btn-default" id="singcms-button-submit">Submit</button>
+						</div>
+					</div>
+				</form>
+
+			</div>
+
+		</div>
+		<!-- /.row -->
+
+	</div>
+	<!-- /.container-fluid -->
+
+</div>
+<!-- /#page-wrapper -->
+
+</div>
+<!-- /#wrapper -->
+<script>
+	var SCOPE = {
+		'save_url' : '/admin.php?c=basic&a=add',
+		'jump_url' : '/admin.php?c=basic',
+	};
+
+</script>
+<include file="Index/footer" />

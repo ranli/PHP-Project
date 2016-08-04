@@ -1,0 +1,1 @@
+a:5:{s:5:"title";s:7:"singcms";s:8:"keywords";s:25:"体育资讯 社会新闻";s:11:"description";s:33:"一个你意想不到的网站！";s:9:"dumpmysql";s:1:"1";s:10:"casheindex";s:1:"0";}

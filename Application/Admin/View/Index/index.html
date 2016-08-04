@@ -1,0 +1,131 @@
+<include file="Index/header" />
+<body>
+
+<div id="wrapper">
+
+    <include file="Index/nav"/>
+
+<div id="page-wrapper">
+
+    <div class="container-fluid">
+
+        <!-- Page Heading -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">
+                    Hello!Welcone to use singcms content management platform
+                </h1>
+                <ol class="breadcrumb">
+                    <li class="active">
+                        <i class="fa fa-dashboard"></i> Platform Overview
+                    </li>
+                </ol>
+            </div>
+        </div>
+
+
+        <div class="row">
+            <div class="col-lg-3 col-md-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <i class="fa fa-comments fa-5x"></i>
+                            </div>
+                            <div class="col-xs-9 text-right">
+                                <div class="huge">{$admincount}</div>
+                                <div>Today Login Users</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                        <div class="panel-footer">
+                            <span class="pull-left"></span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="panel panel-green">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <i class="fa fa-tasks fa-5x"></i>
+                            </div>
+                            <div class="col-xs-9 text-right">
+                                <div class="huge">{$newscount}</div>
+                                <div>Article Numbers</div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="/admin.php?c=content&a=index">
+                        <div class="panel-footer">
+                            <span class="pull-left">View</span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="panel panel-yellow">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <i class="fa glyphicon glyphicon-asterisk  fa-5x"></i>
+                            </div>
+                            <div class="col-xs-9 text-right">
+                                <div class="huge">{$news.count}</div>
+                                <div>Max viewed article</div>
+                            </div>
+                        </div>
+                    </div>
+                    <a target="_blank" href="/index.php?c=detail&id={$news.news_id}">
+                        <div class="panel-footer">
+                            <span class="pull-left"></span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix">{$news.title}</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="panel panel-red">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <i class="fa fa-support fa-5x"></i>
+                            </div>
+                            <div class="col-xs-9 text-right">
+                                <div class="huge">{$position}</div>
+                                <div>Promotion Position Number</div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="/admin.php?c=position">
+                        <div class="panel-footer">
+                            <span class="pull-left">Check</span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+
+
+
+    </div>
+    <!-- /.container-fluid -->
+
+</div>
+<!-- /#page-wrapper -->
+<!-- Morris Charts JavaScript -->
+
+</div>
+    <!-- /#wrapper -->
+
+<include file="Index/footer" />
